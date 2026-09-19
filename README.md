@@ -1,27 +1,37 @@
-Java Multithreaded Chat Application
-📌 Overview
+# Java Multithreaded Chat Application
 
-This project implements a multithreaded chat application in Java, allowing multiple clients to connect to a server and exchange messages in real-time.
-It demonstrates the use of Java sockets, threads, and I/O streams for network communication.
+A console-based client-server chat application demonstrating Java socket programming, multithreading, and I/O streams.
 
-🚀 Features
+## Features
+- Multiple clients connected to one server
+- Real-time message exchange
+- Server-side broadcast to connected clients
+- Graceful client connection/disconnection handling
+- Console-based interface
 
-Multi-client support using threads
+## Tech Stack
+- Java SE
+- `java.net.Socket`
+- `java.net.ServerSocket`
+- Java Threads
+- Java I/O Streams
 
-Real-time messaging between clients
+## Architecture
 
-Server broadcasts messages to all connected clients
+```text
+Client 1 ──┐
+Client 2 ──┼──> Chat Server ──> Broadcast
+Client 3 ──┘
+```
 
-Graceful handling of client connections and disconnections
+Each client communicates with the server over a socket. The server uses separate execution threads to handle connected clients concurrently.
 
-Console-based interface for simplicity
+## Learning Outcomes
+- TCP socket communication
+- Concurrent client handling
+- Thread lifecycle and synchronization concepts
+- Stream-based network I/O
 
-🛠 Technologies Used
+## Run
 
-Java SE
-
-Socket Programming (java.net.Socket, java.net.ServerSocket)
-
-Multithreading (java.lang.Thread)
-
-Input/Output Streams (java.io)
+Start the server first, then launch one or more clients using the Java source files in the repository.
